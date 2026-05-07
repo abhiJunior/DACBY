@@ -1,4 +1,5 @@
 import express from "express"
+import connectToDB from "./Config/dbConfig.js"
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.get("/api/health",(req,res)=>{
 const PORT = 5000 
 
 
-app.listen(PORT,()=>{
+app.listen(PORT,async()=>{
+    await connectToDB()
     console.log(`Server is running at http://localhost:${5000}`)
 })
