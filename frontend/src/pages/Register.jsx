@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 
@@ -11,7 +11,7 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
 
   const { login } = useAuth();
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const Register = () => {
         password,
       });
       login(data.token, data.user);
-    //   navigate('/stories');
+      navigate('/stories');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed. Please try again.');
     } finally {
@@ -51,14 +51,14 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Full Name
+              Username
             </label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              placeholder="enter name"
+              placeholder="johndoe"
               className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
@@ -102,9 +102,9 @@ const Register = () => {
 
         <p className="text-sm text-center text-gray-500 mt-5">
           Already have an account?{' '}
-          {/* <Link to="/login" className="text-orange-500 hover:underline font-medium">
+          <Link to="/login" className="text-orange-500 hover:underline font-medium">
             Login
-          </Link> */}
+          </Link>
         </p>
 
       </div>
