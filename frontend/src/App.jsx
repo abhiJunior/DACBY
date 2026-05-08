@@ -1,10 +1,16 @@
 import React from 'react'
+import Register from './pages/Register'
+import AuthProvider from './context/AuthContext'
 
 function App() {
   return (
-    <div className='text-red-600 text-2xl'>
-      App
-    </div>
+    <>
+    <AuthProvider>
+        <Register/>
+    </AuthProvider>
+    
+    </>
+    
   )
 }
 
