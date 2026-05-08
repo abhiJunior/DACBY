@@ -8,12 +8,9 @@ const StoryCard = ({ story, onBookmarkToggle, isLoggedIn }) => {
     : false;
 
   const formatDate = (dateStr) => {
-    try {
-      return new Date(dateStr).toLocaleString();
-    } catch {
-      return dateStr;
-    }
-  };
+    if (!dateStr) return 'Unknown';
+    return dateStr; 
+   }
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 hover:shadow-md transition">

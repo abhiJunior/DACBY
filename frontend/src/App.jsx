@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import AuthProvider from './context/AuthContext';
-import Navbar from './components/Navbar';
-import ProtectedRoute from './components/ProtectedRoute';
+import Navbar from './component/Navbar';
+import ProtectedRoute from './component/ProtectedRoute';
 import Stories from './pages/Stories';
 import Bookmarks from './pages/Bookmarks';
 import Login from './pages/Login';

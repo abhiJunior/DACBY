@@ -37,7 +37,7 @@ const Navbar = () => {
                 Bookmarks
               </Link>
               <span className="text-sm text-gray-500">
-                Hi, {user?.username}
+                Hi, {user?.email}
               </span>
               <button
                 onClick={handleLogout}

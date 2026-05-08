@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
-import StoryCard from '../components/StoryCard';
+import StoryCard from '../component/StoryCard';
 
 const Stories = () => {
   const [stories, setStories] = useState([]);

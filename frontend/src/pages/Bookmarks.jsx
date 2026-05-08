@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
-import StoryCard from '../components/StoryCard';
+import StoryCard from '../component/StoryCard';
 
 const Bookmarks = () => {
   const [bookmarked, setBookmarked] = useState([]);
