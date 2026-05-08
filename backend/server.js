@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173", 
-    "https://etharaai-6mrc.onrender.com"
+    "https://dacby.onrender.com"
   ],
   credentials: true
 }));
