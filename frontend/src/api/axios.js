@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  // use this http://localhost:5000 as a base url if running in dev
+  baseURL: 'https://dacby-backend-lm1u.onrender.com',
 });
 
 api.interceptors.request.use(
