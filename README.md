@@ -82,8 +82,7 @@ Make sure you have the following installed before running the project:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/hn-reader.git
-cd hn-reader
+git clone https://github.com/abhiJunior/DACBY.git
 ```
 
 ---
@@ -147,9 +146,10 @@ Create a `.env` file inside the `backend/` directory with the following variable
 **Example `.env` file:**
 
 ```env
+DB_PASSWORD=1G8GMmZdHbbMVOjt
+JWT_PASSWORD=12345678
+JWT_EXPIRY=3d
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/hn-reader
-JWT_SECRET=your_super_secret_key_here
 ```
 
 > ⚠️ Never commit your `.env` file to version control. It is already listed in `.gitignore`.
